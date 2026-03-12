@@ -2,8 +2,8 @@
 
 attempt at deobfuscating and adding new features to the openspell client, to promote development on the existing client.
 
-the highspell client seems to be written in typescript and compiled to js, which involves a lot of minification and logic obfuscation.
-the first 179,000 lines are all renderer code, and aren't getting touched... works just fine as-is :)
+the original highspell client seems to have been written in typescript and compiled to js, which involves a lot of minification and logic obfuscation.
+the first 180k~ lines are renderer code, and won't be touched... works just fine as-is :)
 
 not all features require full deobfuscation to implement, if they're similar to existing features.
 
