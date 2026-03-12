@@ -7,6 +7,8 @@ the first 180k~ lines are renderer code, and won't be touched... works just fine
 
 not all features require full deobfuscation to implement, if they're similar to existing features.
 
+ultimate goal is to add vanilla-esque features, and open the way to making future changes easier.
+
 ----
 
 ### completed so far
