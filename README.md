@@ -9,8 +9,10 @@ not all features require full deobfuscation to implement, if they're similar to 
 
 ----
 
-### completed
-- simple true/false deobfuscation to get us goin
+### completed so far
+- light deobfuscation: some low-hanging class names, functions, etc
+- global chat mute toggle in chat settings
+    - could be better... global messages get completely discarded when setting enabled, unlike the highlite plugin which only temporarily hides them...
 
 ### todo: deobfuscation
 - readable class names
@@ -25,4 +27,5 @@ not all features require full deobfuscation to implement, if they're similar to 
 - comments! i love comprehending!!
 
 ### todo: new features
-- global chat mute toggle in settings
+- better global chat mute
+  - maybe the toggle adds a css rule to temporarily hide global messages instead...
