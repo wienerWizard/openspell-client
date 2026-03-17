@@ -1,0 +1,18 @@
+/*
+  toggle chat types by adding class to #hs-chat-menu-section-container:
+  .mute-global
+  .mute-private
+  .mute-local
+  
+  checkboxes in chat settings add/remove these classes on check/uncheck
+*/
+
+#hs-chat-menu-section-container.mute-private #hs-private-message-list li {
+  display: none;
+}
+#hs-chat-menu-section-container.mute-global #hs-public-message-list li:has(.hs-action-bar-item__image--globe) {
+  display: none;
+}
+#hs-chat-menu-section-container.mute-public #hs-public-message-list li:has(.hs-text--yellow.hs-chat-menu__pre-text) {
+  display: none;
+}
