@@ -1,18 +1,19 @@
 /*
   toggle chat types by adding class to #hs-chat-menu-section-container:
-  .mute-global
-  .mute-private
-  .mute-local
-  
+  .hs-chatbox--mute-global
+  .hs-chatbox--mute-private
+  .hs-chatbox--mute-public
+
   checkboxes in chat settings add/remove these classes on check/uncheck
 */
 
-#hs-chat-menu-section-container.mute-private #hs-private-message-list li {
+#hs-chat-menu-section-container.hs-chatbox--mute-global #hs-public-message-list li:has(.hs-action-bar-item__image--globe) {
+  /* this only mutes msgs with the globe icon, for the added benefit of never blocking msgs from pmods/admins/etc :) */
   display: none;
 }
-#hs-chat-menu-section-container.mute-global #hs-public-message-list li:has(.hs-action-bar-item__image--globe) {
+#hs-chat-menu-section-container.hs-chatbox--mute-private #hs-private-message-list li {
   display: none;
 }
-#hs-chat-menu-section-container.mute-public #hs-public-message-list li:has(.hs-text--yellow.hs-chat-menu__pre-text) {
+#hs-chat-menu-section-container.hs-chatbox--mute-public #hs-public-message-list li:has(.hs-text--yellow.hs-chat-menu__pre-text) {
   display: none;
 }
