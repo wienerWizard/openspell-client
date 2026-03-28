@@ -3,7 +3,7 @@
 attempt at deobfuscating and adding new features to the openspell client, to promote development on the existing client.
 
 the original highspell client seems to have been written in typescript and compiled to js, which involves a lot of minification and logic obfuscation.
-the first 180k~ lines are renderer code, and won't be touched... works just fine as-is :)
+the first 180k~ lines are renderer code (babylon.js), and won't be touched... works just fine as-is :)
 
 not all features require full deobfuscation to implement, if they're similar to existing features.
 
@@ -26,21 +26,22 @@ ultimate goal is to add vanilla-esque features, and open the way to making futur
 
 ### completed so far
 - light deobfuscation: some low-hanging class names, functions, etc
-- global chat mute toggle in chat settings
-    - could be better... global messages get completely discarded when setting enabled, unlike the highlite plugin which only temporarily hides them...
+- chat mute toggles in chat settings, to temporarily hide global/private/public chats 
+- taller bank toggle in main settings, to make bank take up more space on bigger screens
 
 ### todo: deobfuscation
 - readable class names
   - most of the useful stuff has been defined already by the highlite project, but i'd like to work towards everything being legible
   - many verbose errors in code already state the name of their parent class which is nice
+  - deobfuscation will p much just happen naturally as i explore more of the code and need to understand vanilla to add my own stuff
 - readable variables
   - starting with the more useful functions, or those being worked on to add new features
   - most will need to be implied or remain vague
 - cleaner logic
   - convert weird && and || operations into equiv if() else{} statements
-  - clean up the billions of redundant commas
+  - clean up the billions of redundant commas and semicolons
 - comments! i love comprehending!!
 
 ### todo: new features
-- better global chat mute
-  - maybe the toggle adds a css rule to temporarily hide global messages instead...
+- remember "toggle minimap" setting so i don't gotta keep toggling it on login
+- some better way to actually use this file in a browser without having to do the js override thing
