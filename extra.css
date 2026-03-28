@@ -1,12 +1,4 @@
-/*
-  toggle chat types by adding class to #hs-chat-menu-section-container:
-  .hs-chatbox--mute-global
-  .hs-chatbox--mute-private
-  .hs-chatbox--mute-public
-
-  checkboxes in chat settings add/remove these classes on check/uncheck
-*/
-
+/* mute chats by toggling message visibility */
 #hs-chat-menu-section-container.hs-chatbox--mute-global #hs-public-message-list li:has(.hs-action-bar-item__image--globe) {
   /* this only mutes msgs with the globe icon, for the added benefit of never blocking msgs from pmods/admins/etc :) */
   display: none;
@@ -16,4 +8,13 @@
 }
 #hs-chat-menu-section-container.hs-chatbox--mute-public #hs-public-message-list li:has(.hs-text--yellow.hs-chat-menu__pre-text) {
   display: none;
+}
+
+/* taller bank */
+#hs-bank-menu.hs-bank--taller  {
+    min-height: 17.5rem;
+    height: 60%;
+}
+#hs-bank-menu.hs-bank--taller  #hs-bank-menu__content-container {
+    height: 100%;
 }
